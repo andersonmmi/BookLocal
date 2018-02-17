@@ -1,4 +1,4 @@
-/*Colors*/
+//colors
 $orange1: rgb(231, 158, 109);
 $orange2: rgb(226, 124, 57);
 $orange3: #E66E1C;
@@ -11,18 +11,92 @@ $font-gray: #464749;
 $header-gray: #3C3C3C;
 $gray: rgb(71, 71, 71);
 
-.App {
-  text-align: center;
+// media queries
+ $mob: 480px;
+ $tab: 768px;
+ $desk: 992px;
+ $xldesk: 1200px;
+
+ // font
+ $font-main: 'Raleway', sans-serif;
+
+ // CSS Reset (for browser consistency)
+ //https://meyerweb.com/eric/tools/css/reset/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-header {
-  background-color: $header-gray;
-  height: 70px;
-  /*padding: 20px;*/
-  border-bottom: 5px solid #E66E1C;
-  color: white;
-  /*hide on scroll*/
+// main styles
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: $font-main;
 }
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+//header navigation styles
+
+.App-header {
+  background-color: white;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid $gray;
+  color: white;
+  @media (min-width: $tab) {
+    justify-content: flex-start;
+  }
+}
+
+.logo {
+  width: 200px;
+  height: 100%;
+}
+
+//
 
 .App-title {
   font-size: 1.5em;
@@ -32,14 +106,6 @@ $gray: rgb(71, 71, 71);
   font-size: large;
 }
 
-.Logo {
-  margin: 15px auto;
-  // display: block;
-  // max-width: 100%;
-  height: auto;
-  width: auto;
-  z-index: 5;
-}
 
 .underline {
   text-decoration: underline;
@@ -48,19 +114,19 @@ $gray: rgb(71, 71, 71);
 .what {
   background-color: $gray;
   color: #FFF;
-  
+
 }
 
 .why {
   background-color: white;
   color: $logo-blue;
-  
+
 }
 
 .who {
   background-color: white;
   color: $font-gray;
-  
+
 }
 
 .how {
@@ -115,7 +181,7 @@ p {
 }
 
 %paragraph {
-  
+
   // max-width: 576px;
   margin-left: 0;
   margin-top: 24px;

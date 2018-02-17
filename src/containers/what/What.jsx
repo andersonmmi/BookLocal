@@ -22,15 +22,15 @@ class What extends Component {
   render() {
     return (
       <div className='what'>
-        <Section 
+        <Section
           pad='none'
           align='stretch'
           alignContent='center'
           appCentered='true'
-        > 
+        >
 
           {/* 1 */}
-          <div className='heading'>What</div>
+          <h1>What</h1>
           <p className='paragraph-white'>
             The vision for BookLocal is to connect travelers directly to their hotel of choice
             by creating the first two way property management system accessible as both
@@ -49,12 +49,12 @@ class What extends Component {
           <p className='paragraph-white'>
             To the traveler, BookLocal will provide the following features:
           </p>
-          
-          <CustomList 
+
+          <CustomList
             bgColor={colors.gray}
-            
+
           >
-            <CustomListItem 
+            <CustomListItem
               // height="auto"
               // animation="slide-left"
               color="$black"
@@ -174,7 +174,7 @@ class What extends Component {
               <Image
                 size='thumb'
                 src={Revenue}
-              />              
+              />
               Revenue Management
               <div></div>
             </CustomListItem>
