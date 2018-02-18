@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 // UI Components
 // import LoginButtonContainer from './user/ui/loginbutton/LoginButtonContainer'
 // import LogoutButtonContainer from './user/ui/logoutbutton/LogoutButtonContainer'
-import Reserve from '../components/Reserve';
+import Reserve from '../components/Reserve.js';
+import Reserve2 from '../components/Reserve2.js';
 
 // Styles
 // import '../styles/oswald.css'
@@ -44,6 +45,7 @@ class App extends Component {
         </nav> */}
 
         <Reserve/>
+        <Reserve2 />
       </div>
     );
   }

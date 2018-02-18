@@ -10,7 +10,7 @@ let web3 = window.web3
 if (typeof web3 !== 'undefined') {
   // Use Mist/MetaMask's provider
   web3 = new Web3(window.web3.currentProvider);
-  console.log("first case");
+  console.log("web3 provider found");
 } else {
   console.log('No web3? You should consider trying MetaMask!')
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
@@ -19,7 +19,7 @@ if (typeof web3 !== 'undefined') {
 
 // stolen code zone ^^^
 
-let RRAbi = require('../../abis/RoomRentingAbi.js');
+let RRAbi = require('../../ABIs/RoomRentingAbi.js');
 let RRAddress = require('../../contractAddress/rinkebyAddress.js');
 let RR = web3.eth.contract(RRAbi).at(RRAddress);
 
@@ -132,16 +132,16 @@ class Reserve extends Component{
       <div style={style} className="reserve">
         <fieldset style={fieldset}>
           <legend style={legendStyle}>Reserve Your Room</legend>
-            <div style={labelStyle}>Room Id: 
+            <div style={labelStyle}>Room Id:
               <input id="tokenId" type="text" style={inputStyle} onChange={this.handleTextChange} value={this.state.tokenId} />
             </div>
-            <div style={labelStyle}> Check-in date: 
+            <div style={labelStyle}> Check-in date:
               <input id="start" type="text" style={inputStyle} onChange={this.handleTextChange} value={this.state.start} />
             </div>
-            <div style={labelStyle}> Check-out date: 
+            <div style={labelStyle}> Check-out date:
               <input id="stop" type="text" style={inputStyle} onChange={this.handleTextChange} value={this.state.stop} />
             </div>
-            <div style={labelStyle}> Access Code: 
+            <div style={labelStyle}> Access Code:
               <input id="accessCode" type="text" style={inputStyle} onChange={this.handleTextChange} value={this.state.accessCode} />
             </div>
             {/* <hr /> */}
