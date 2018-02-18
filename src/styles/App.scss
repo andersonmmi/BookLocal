@@ -77,6 +77,10 @@ h1 {
   font-weight: 900;
 }
 
+h3{
+  text-transform: uppercase;
+}
+
 //header navigation styles
 
 .App-header {
@@ -96,7 +100,23 @@ h1 {
   height: 100%;
 }
 
-//
+// hero
+
+.hero-text {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 0 40px;
+  z-index: 2;
+  line-height: 1.2;
+  @media (min-width: $tab) {
+    font-size: 35px;
+  }
+  @media (min-width: $desk) {
+    font-size: 45px;
+  }
+}
 
 .App-title {
   font-size: 1.5em;
@@ -176,9 +196,7 @@ h1 {
   // padding: 10px 0;
 }
 
-p {
-  font-family: Titillium Web, sans-serif;
-}
+
 
 %paragraph {
 
@@ -201,21 +219,7 @@ p {
   color: $font-gray;
 }
 
-.heading {
-  font-family: Segoe UI, Arial, sans-serif;
-  padding: .75em;
-  font-size: 5rem;
-  line-height: 1.125;
-  text-align: center;
-  font-weight: 300;
-  max-width: 100%;
-  // color: white;
-  // border-top: 5px solid #E66E1C;
-}
 
-h2, h3 {
-  font-family: PT Sans Narrow;
-}
 
 .bold {
   font-weight: bold;
@@ -237,8 +241,21 @@ h2, h3 {
 .blue-web {
   background-image: url('../images/blue-web.jpeg');
 }
+
 .blockchain {
-  background-image: url('../images/blockchain-technologies.jpg');
+  background-image: url('../images/railway.jpg');
+  position: relative;
+}
+
+.blockchain:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+
 }
 .blue-world-dots {
   background-image: url('../images/blue-world-dots.jpeg');

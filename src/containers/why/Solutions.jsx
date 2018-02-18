@@ -7,17 +7,11 @@ class Solutions extends Component {
 
   render() {
     return (
-      <div 
+      <div
       className="solutions"
       >
         {/* 2.2 */}
-        <Heading align='center' 
- 	 	 	 	 	 	 margin='large'
-          tag='h1'
-          style={{color: colors.logoBlue}}
-          >
-          Solutions
-        </Heading>
+        <h2>Solutions</h2>
         <p className='paragraph-gray'>
           BookLocal will design a platform that incorporates the best features of the current system while omitting middlemen.
         </p>
